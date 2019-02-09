@@ -3,13 +3,43 @@
 ![The Equation Image](../img/e=mc2.png)
 
 
+### Running Python scripts
+
+    $ conda activate nanohackers
+    $ ipython
+
+    [1] odds = [n for n in range(10) if n % 2 == 1]
+    [2] print("The first odds: ", odds)
+
+    [3] odds. # press tab after the '.' and select 'count'
+
+    [4] !ls # we can execute shell commands
+
+    [5] %save odds.py 1-2
+
+    [6] quit()
+
+    $ python odds.py
+
+
 ### Math
+
 - Function, polynomial: linear, quadratic, cubic (smooth fns)
 - Plotting functions using matplotlib
 - Find (maxima and) minima of a quadratic function
 
-- How do we approximate a function?
-- Slope = rate of change (ladder analogy, step 1, step2, step3??? step4?????)
+
+### Matplotlib, plotting a function
+
+* Show me the code
+
+
+### Slope: rate of change
+    - Slope = rate of change (ladder analogy, step 1, step2, step3??? step4?????)
+
+
+### How do we find the minimum of a function?
+    - By approximation. How?
 
 
 ### Numpy
@@ -64,6 +94,7 @@
             sub = img[row*s:(row+1)*s, col*s:(col+1)*s,:]
             for c in range(nchannels):
                 buffer[row, col, c] = np.max(sub[:,:,c])
+                #
 
 
 #### Ex: Image kernel
@@ -90,9 +121,8 @@
     - https://nbviewer.jupyter.org/
     - Share on your github as an .ipynb file
 
-- Collaborate on a notebook (just google docs)
+- Collaborate on a notebook (google docs)
     - https://colab.research.google.com/
-
 
 
 ### Magenta.js
@@ -106,6 +136,20 @@
     https://github.com/googlecreativelab/melody-mixer
 
 
-
 ### Reference
-Colab: https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c
+- Colab
+    - https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c
+
+
+### Matplotlib Reference
+
+- Animation with Matplotlib
+  https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
+
+- Animation Examples
+  https://matplotlib.org/examples/animation/index.html
+
+- Examples
+  - https://matplotlib.org/examples/index.html
+  - https://github.com/matplotlib/matplotlib
+

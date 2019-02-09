@@ -37,8 +37,8 @@ A line is a dot that went for a walk
 
 ### Setup Anaconda
 
+    # Version Manager for Python and package manager
     # Anaconda is like rvm in Ruby or nvm in node
-    # Version Manager for Python
 
     # Install anaconda 3.7. https://www.anaconda.com/distribution/
     # Popular Python versions: 2.7, 3.6 and 3.7

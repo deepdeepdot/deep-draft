@@ -196,52 +196,22 @@ Machine Learning Topics
 
 
 
-### Running Python scripts
 
-    $ python <filename>
+### Run a Python web server
 
-    $ ipython
-
-    [1] odds = [n for n in range(10) if n % 2 == 1]
-    [2] print("The first odds: ", odds)
-    [3] %save odds.py 1-2
-    [4] quit()
-
-    $ python odds.py
-
-    # Run a Python web server
     # Python 2.7
+    $ conda activate python2.7
+    $ python --version
+    $ echo '<h1>Hello, Python 2.7!</h1>' > index.html
     $ python -m SimpleHTTPServer
 
     # Python 3
+    $ conda activate nanohackers
+    $ python --version
+    $ echo '<h1>Hello, Python 3!</h1>' > index.html
     $ python -m http.server 8080
 
-
-
-
-
-
-
 ====
-
-
-Extras (not that impressive for my needs!!)
-#### Example: Draw a gray cross over an image
-
-    from PIL import Image, ImageDraw
-
-    image = Image.open("panda-corner.jpg")
-    image.show()
-
-    draw = ImageDraw.Draw(image)
-    draw.line((0, 0) + image.size, fill=128)
-    draw.line((0, image.size[1], image.size[0], 0), fill=128)
-    del draw
-
-    # write to stdout
-    image.save("panda-cross.png", format="PNG")
-
-
 
 #### RGBA -> Create transforms using RGBA!!!
 

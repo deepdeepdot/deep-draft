@@ -1,6 +1,6 @@
 ### What's a function?
 
-![The Equation Image](../img/e=mc2.png)
+![The Equation Image](img/e=mc2.png)
 
 
 #### Running Python scripts

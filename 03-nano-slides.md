@@ -1,6 +1,6 @@
 ### Normal distribution, trees, recursion
 
-![Fixing Problems Image](../img/fixing_problems.webp)
+![Fixing Problems Image](img/fixing_problems.webp)
 
 
 ### Cyber Teenagers

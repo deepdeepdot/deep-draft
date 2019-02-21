@@ -1,6 +1,6 @@
 ## What's the Matrix?
 
-![The Matrix Image](../img/matrix_reboot.jpg)
+![The Matrix Image](img/matrix_reboot.jpg)
 
 
 ### Session 1

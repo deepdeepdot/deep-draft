@@ -1,0 +1,388 @@
+https://natureofcode.com/book/chapter-10-neural-networks/
+
+
+Google: coding train neural network playlist
+
+----
+
+Important: categorical vs continuous (numerical)
+Loss function:
+    Cross-entropy (binary), softmax (multi-class) log loss, SVM margin loss
+    regression loss: L2 (euclidian), L1
+
+Supervised and unsupervised
+
+https://www.pycon.it/media/conference/slides/a-gentle-introduction-to-neural-networks-with-python.pdf
+
+logistic function: sigmoid (brain simulation)
+
+----
+
+#1 Computational Graph
+    Forward
+    Backward: gradients
+
+while True:
+    data_batch = dataset.sample_data_batch()
+    loss = network.forward(data_batch)
+    dx = network.backward()
+    x += learning_rate * dx
+
+Tensorflow
+
+---> Try some tensorflow examples
+
+==> Or keras? (re-activate)
+
+
+Session #4
+
+* Computation Graph + Backpropagation (to find slope)
+-> Minimize loss (gradient descent)
+
+* NN in 11 lines? (fully connected)
+
+
+* Predict the coefficients for my function given 100 sample points
+
+
+
+    Why multiple keras layers?
+
+    Image classifier using keras and mnist
+    https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d
+
+
+
+*** https://www.katacoda.com/basiafusinska/courses/tensorflow-getting-started/tensorflow-core
+
+
+
+* https://www.katacoda.com/basiafusinska/courses/tensorflow-getting-started
+
+
+Wah? a tutorial???
+https://www.katacoda.com/basiafusinska/courses/tensorflow-getting-started/tensorflow-mnist-beginner
+
+
+Session #5
+
+
+
+Session #6: k-clustering? unsupervised learning
+
+
+Session #7 The Roadmap of ML
+
+-----
+
+Artificial Neuron
+
+https://www.youtube.com/watch?v=SGZ6BttHMPw
+Hugo Larochelle
+
+Single Neuron
+
+* Neuron pre-activation
+    a(x) = b + Sum-i Wi Xi = b + W.T * X
+
+* Neuron output activation
+    h(x) = g(a(x)) + g(b + W.T * X)
+
+W : connection weights
+g : neuron bias
+g(x): activation function (range: -1 to 1)
+
+Neural Network (3Blue1Brown)
+https://www.youtube.com/watch?v=aircAruvnKk
+
+Image input: 28x28 pixels = 784 values (0-255 => 0:1)
+
+2 layers of 16 neurons each
+
+2 Hidden layers
+    Layer1: 784 x 16 (find edges)
+    Layer2: 16 x 16 (find patterns)
+Final layer: 16 x 10
+
+weights + (16 + 16 + 10) biases
+
+=> 13,002 params to give the correct output
+Sigmoid(bias + W.T * A), A: activation
+
+https://www.youtube.com/watch?v=IHZwWFHWa-w
+
+what's the cost? loss function
+
+Cost of a single training examples
+
+cost = Sum((pred - Y) ** 2)
+
+Given the Y vector prediction, we subtract the one-hot encoding of the real
+Sum(Square all the terms)
+
+Average of all the training examples
+
+NN function
+Input: 784 numbers (pixels)
+Output: 10 numbers (0 to 1)
+Params: 13,002 weights + biases
+
+Cost function
+Input: 13,002 weights/biases
+Output: 1 number (the cost)
+
+"Gradient", the direction of the steepest increase
+-> opposite to find the minimum: steepest descent: -gradient
+
+Valley
+    Compute gradient
+    Small step in the -gradient direction
+    Repeat
+
+Test against the Test Data -> Get real error!
+
+Backpropagation
+http://colah.github.io/posts/2015-08-Backprop/
+
+Source code:
+https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/src/network.py
+
+Backpropagation calculus
+https://www.youtube.com/watch?v=tIeHLnjs5U8
+
+
+----
+
+Neural networks [1.1] : Feedforward neural network - artificial neuron
+Hugo Larochelle
+
+Neural networks [1.1] : Feedforward neural network - artificial neuron
+https://www.youtube.com/watch?v=SGZ6BttHMPw
+
+Neural networks [1.2] : Feedforward neural network - activation function
+https://www.youtube.com/watch?v=tCHIkgWZLOQ
+
+
+Activation function g()
+-Linear activation function: g(a) = a (straitgh line)
+Not very interesting (non-linearity -> more complicated functions)
+
+-Sigmoid activation function: g(a) = sigm(a) = 1 / (1+exp(-a))
+  -Squashes the neuron's pre-activation between 0 and 1
+  -Always positive
+  -Bounded
+  -Strictly increasing
+
+-Hyperbolic tangent (tanh) activation
+tanh(a) = exp(a) - exp(-a) / (exp(a) + exp(-a)) = exp(2a) - 1 / (exp(2a) + 1)
+  -Squashes the neuron's pre-activation between -1 and 1
+
+-Rectified linear activation function (Relu)
+* Bounded below by 0 (always non-negative)
+* No upper Bounded
+* Strictly increasing
+* Tends to give neurons with sparse activities -> Lots of zeros
+g(a) = reclin(a) = max(0,a)
+
+
+Neural networks [1.3] : Feedforward neural network - capacity of single neuron
+https://www.youtube.com/watch?v=iT5P4z6Fzj8
+
+Binary classification: 
+with sigmoid, can interpret neuron as estimating p(y=1|x)
+* known as logistic regression classifier
+* if > 0.5, predict class 1. otherwise, 0
+* decision boundary is linear
+
+Can solve linearly separable problems
+OR(x1,x2), AND(-x1, x2), AND(x1, -x2)
+XOR(x1,x2)? But = AND(-x1,x2) vs AND(x1,-x2)
+
+XOR(x1,x2) = XOR(AND(-x1,x2), AND(x1,-x2)) -> linearly separable
+
+Transform inputs in a better representation
+
+
+Neural networks [1.4] : Feedforward neural network - multilayer neural network
+https://www.youtube.com/watch?v=apPiZd-qnZ8
+
+Single neuron cannot solve linearly, but transforming the input
+can help solve it linearly separable
+
+Single hidden layers
+
+Hidden layer pre-activation
+a(x) = b1 + W1 * x
+
+Hidden layer activation
+h(x) = g(a(x))
+
+Output layer activation
+f(x) = o(b2 + W2.T * h1 * x), with o() activation function, usually different than hidden actication function
+
+Softmax activation function
+* For multi-class classification -> LABELS (or classes)
+* We would like to estimate the conditional prob p(y=c|x), class c: [1,...,C]
+
+o(a) = softmax(a) = [ exp(a1)/sum(exp(ac)) ..... exp(aC)/sum(exp(ac))].T
+* stricty positive
+* Sum = 1, since we divide by the sum of all exp(ai)
+Predicted class: highest estimated probability
+
+Multilayer neural network
+
+Neural networks [1.5] : Feedforward neural network - capacity of neural network
+https://www.youtube.com/watch?v=O4I7dQC4VtU
+
+Single neuron: OR and AND
+Two neurons: XOR
+Neural Network: more complex function
+
+Single hidden layer neural network capacity?
+What functions can we model and which ones we cannot model?
+
+Bump in the central area -> Multi-bump model, 
+chunks of regions separated, and each region represents one class
+===> Complicated decision surface
+
+Universal approximation (Hornik, 1991)
+"a single hidden layer neural network witha linear output can approximate
+any continuous function arbitrarily, given enough hidden units"
+- it applies for sigmoid, tanh, and many other
+
+---> good result, but it doesn't mean there is a learning
+algorithm to find the necessary parameter values
+(no known algorithm to solve using this architecture)
+    --> area of research
+    https://en.wikipedia.org/wiki/Universal_approximation_theorem
+
+Neural networks [2.1] : Training neural networks - empirical risk minimization
+https://www.youtube.com/watch?v=5adNQvSlF50
+
+Training neural network -> convert into an optimization problem
+
+For all samples
+    Sum( Loss(sample data - predicted data for sample))
+    over all samples + lambda * regularizer (penalizes certain values of Delta)
+
+Learning is cast as optimization
+
+Stochastic Gradient Descent (SGD)
+
+    1. Initialize Delta { Delta: W1, b1 W2, b2... WL, bL}
+
+    2. For N interations
+        for each training example (xt, yt)
+            D = -gradient of loss (f(xt,T), yt) - lambda gradient of regularizer(T)
+            T = T + alpha * D
+    
+    training epoch = iteration over all examples
+
+
+Neural networks [2.2] : Training neural networks - loss function
+https://www.youtube.com/watch?v=PpFTODTztsU
+
+Loss function for classification
+f(x) = p(y = c | x)
+
+To convert the maximization into a minimization, we use
+negative log-likelihood
+
+Cross-entropy loss
+
+Why log? Because we need gradients and log is easier to get derivatives
+
+Neural networks [2.3] : Training neural networks - output layer gradient
+
+
+
+
+https://www.youtube.com/watch?v=PpFTODTztsU&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=8
+
+Hugo Larochelle, Neural Networks class, Universite de Sherbrooke
+-----
+
+http://introtodeeplearning.com/
+
+----
+
+How about polynomial -> linear regression?
+
+2 Neural Networks
+
+with different loss functions
+a) Binary
+    ???
+
+b) Multi-class
+    CIFAR
+
+Regularization
+    Discourage complex models (penalize more complex models)
+    Dropout in NN
+    Early stopping (before overfitting)
+        overfit: performance worse in test set than training set
+        testing error goes up (stop there)
+
+---
+IntroToDeepLearning.com RNN
+
+Sequence modeling criteria
+1. Handle variable-length sequences
+2. Trak long-term dependencies
+3. Maintain information about the order
+4. Share parameters across the sequence
+
+---
+
+http://www.cvdfoundation.org/datasets/open-images-dataset/vis/index.html
+
+
+https://github.com/openimages/dataset
+https://storage.googleapis.com/openimages/web/index.html
+
+https://storage.googleapis.com/openimages/2018_04/bbox_labels_600_hierarchy_visualizer/circle.html
+
+https://developers.google.com/machine-learning/fairness-overview/
+
+---
+
+# Eager execution in tensorflow (from TF 1.5)
+import tensorflow.contrib.eager as tfe
+tfe.enable_eager_execution()
+
+//// tf.while_loop(loop_cond, loop_body, ...)
+
+Static vs Dynamic Models (eager facilitates...)
+
+Inception Model
+
+RNN -> looping changes (length of model proportional to length of sentence)
+
+While loop: complicated to write
+Eager -> native while loops, if conditions
+
+Dynamic Models: tree RNN
+    Look at the parse tree -> build a tree RNN
+
+tfdbg tf.Session
+
+Old code: tflearn, keras, tfslim
+
+tfdbg.LocalCLIDebugWrapperSessions(sess)
+
+run -f has_inf_or_nan
+
+http://www.tensorflow/org/programmers_guide/debugger
+
+tensorboard (v1.6)
+ --logdir /tmp/logdir
+ --port 6006
+ --debugger_port 7007
+
+1 million video dataset, 3seconds
+ http://moments.csail.mit.edu/
+
+8 million
+https://research.google.com/youtube8m/

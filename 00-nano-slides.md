@@ -1,4 +1,4 @@
-### Advanced Nano Hackers
+### Deep Learning for Nano Hackers
 
 * Prerequisites
     * Full stack web development
@@ -20,4 +20,4 @@ https://www.flickr.com/photos/95869671@N08/40544016221
     - tensorflow, keras, pytorch
 * Deep Learning with Javascript
     - ml5.js, magenta.js, tensorflow.js
-
+* NN, CNN, RNN

@@ -118,7 +118,6 @@ Model: quadratic with some known params
 -> iterate and improve the prediction
 
 
-
 Potential projects using ml5js
 a) Create a web front end to pick images and make predictions!
 b) Create a web front end for picking image style transfer (select different artist mode, source)
@@ -128,7 +127,6 @@ c) PoseNet: project Sombrero or Robotize! Or Anonymize
 # Session 3: tensorflow.js, 
 
     Demo: Kodelife Shaders
-
 
     Numpy -> Tensorflow? Why??? GPU!
 
@@ -173,7 +171,16 @@ http://iamtrask.github.io/2017/01/15/pytorch-tutorial/
 
 # Session 4: ForwardFeed NN
 
+    scikit-learn !?
+
+    https://github.com/scikit-learn/scikit-learn
+    https://scikit-learn.org/stable/auto_examples/index.html
+
+    https://github.com/PacktPublishing/scikit-learn-Cookbook-Second-Edition
+
+
     A. Intro to tensorflow, tensorflowjs and curve fitting (using tensorflowjs)
+
 
 # Session 5: RNN
 
@@ -188,13 +195,6 @@ Machine Learning Topics
     * k-clustering
     * Recommenders
 
-# Session 8: GANs
-
-
-# Session 9:
-
-
-
 
 
 ### Run a Python web server
@@ -206,7 +206,7 @@ Machine Learning Topics
     $ python -m SimpleHTTPServer
 
     # Python 3
-    $ conda activate nanohackers
+    $ conda activate nanos
     $ python --version
     $ echo '<h1>Hello, Python 3!</h1>' > index.html
     $ python -m http.server 8080
@@ -221,4 +221,323 @@ Machine Learning Topics
 
 
 TODO: Make sure the convolution kernel can work with numpy arrays or transforms easily.
+
+
+http://web.cs.ucdavis.edu/~yjlee/teaching/ecs289g-winter2018/Pytorch_Tutorial.pdf
+
+-----
+
+Nano sessions
+
+#1 Python (anacaonda, ipython)
+    Matrices -> Image processing (greying, compressing/downsampling)
+
+#2 Numpy
+    Functions -> Plotting, approx
+    -> 
+    Lambdas
+
+#3 Pandas
+    Stats -> Averaging faces, Stdev of faces
+    and Prob? (Bayes's theorem)?
+    Naive Bayes -> Linear estimator?
+    Recursion / Tree
+
+
+Tensorflow Notes
+- Slides from cs20: http://web.stanford.edu/class/cs20si/syllabus.html
+
+Fun notes!!
+    07_ConvNets in tensorflow -> Awesome explanation of ConvNets
+    Conv NN -> Style Transfer
+
+
+Of the many ML topics, the most fundamentals:
+
+1) Classification: image classifier using MNIST
+
+Linear Regression
+SVM: support vector machine
+
+Fun topics:
+DL
+
+CNN: Computer Vision
+
+
+RNN: Sequence Models, Language/Sentence
+    vec2words
+
+
+ML in 4 sessions
+#4 Classification
+    Image classifier
+
+#5 k-clustering?
+
+
+
+#6 Tensorflow and Neural Networks
+
+
+    -> Model Zoo NN
+
+#7 ML map (this could be a nice interactive app)
+
+Pre-trained Models? https://modelzoo.co/
+
+https://github.com/BVLC/caffe/wiki/Model-Zoo
+https://github.com/tensorflow/models
+https://github.com/pytorch/vision/tree/master/torchvision/models
+
+Keras slides!
+
+AI
+    * ML
+        -Linear Regression
+        -SVM
+        -Trees/Ensemble
+        -K-clustering
+
+        * DL
+            NN: perceptron
+                * Not new, but it requires:
+                    -> Massive amounts of data (Internet!)
+                    -> Massive computing power (GPUs)
+            CNN: ConvNet. Computer Vision
+                Model: VGG16, ResNet, AlexNet, LeNet, Inception, Yolo
+                - Face recognition
+                - Pose recognition
+                - Semantic Segmentation / Instance Segmentation
+                - Self-driving cards (Detection)
+                - Deep Dreams
+                - Style Transfer
+                - Colorization (old photos, line drawings)
+            RNN (sequence model, based on time)
+                RNN, GRU, LSTM, word2vec, wavenet
+                - Language
+                    - sentiment analysis
+                    - speech recognition
+                    - translation
+                    - text summarization
+                    - Chat bots
+                        Duplex restaurant reservation
+                - Music
+                    - jazz improvisation
+                    - jamming duet
+                - Image captioning
+    
+            GANS (Adversarial Networks)
+                Deep Fakes?
+
+            RL (Reinforcement Learning)
+                - AlphaGo beating top Go player
+                - Atari AI players
+                - Dota 2 AI players
+                DQN: Deep Q Networks
+
+
+In God we trust; others must provide data
+Anonymous
+
+Popular Datasets
+    MNIST
+        http://yann.lecun.com/exdb/mnist/
+        (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+
+    CIFAR: http://www.cs.toronto.edu/~kriz/cifar.html
+            
+    Celebrity Database
+
+    Kaggle Datasets
+
+Frameworks
+    Tensorflow
+        google
+        stanford cs20
+    Keras
+    Scikit
+    PyTorch (FB)
+        udacity
+    Caffe/Caffe2
+    Theano
+    MXNET
+    AWS?
+
+    Companies:
+        Uber - Horovod: https://eng.uber.com/horovod/
+
+
+
+
+
+Roadmaps to learn?
+
+Data Scientist Roadmap
+http://nirvacana.com/thoughts/2013/07/08/becoming-a-data-scientist/
+
+https://machinelearningmastery.com/machine-learning-for-programmers/
+
+https://machinelearningmastery.com/process-for-working-through-machine-learning-problems/
+
+Small data sets UCI
+https://machinelearningmastery.com/practice-machine-learning-with-small-in-memory-datasets-from-the-uci-machine-learning-repository/
+
+
+Weka:
+https://machinelearningmastery.com/how-to-run-your-first-classifier-in-weka/
+https://www.cs.waikato.ac.nz/ml/weka/book.html
+
+Data sets:
+    http://deeplearning.net/datasets/
+    https://www.kaggle.com/datasets
+
+    CIFAR10
+    MNIST
+    ImageNet
+    MovieLens
+    Celebs (mscoco?)
+    Iris Data Set
+        https://en.wikipedia.org/wiki/Iris_flower_data_set
+
+Celebs, 200,000 images of celebrities
+http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
+
+
+Confusion matrix
+----
+
+Plus interactive MNIST (using keras.js)
+
+----
+
+Present MNIST classifier using scikit-learn (from the book)
+
+but also show the equivalent code in tensorflow.js for making predictions
+-> contrast the two
+
+also the version using keras API
+
+////------ Fun projects
+
+-> PoseNet (use the data points to camouflage the impersonator)
+
+Sombrero contest
+-> Add a black sombrero to the red clown, red sombrero to the black clown
+
+
+Projects
+--------
+
+a) Sombrero project?
+b) Style Transfer -> Deep Dream Generator
+
+c) Music with magenta.js
+
+
+Tutorials
+http://openbookproject.net/thinkcs/python/english3e/index.html
+
+
+CIFAR10 Demo (WoW!)
+https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
+
+
+while True:
+    data_batch = dataset.sample_data_batch()
+    loss = network.forward(data_batch)
+    dx = network.backward()
+    x += learning_rate * dx
+
+
+
+Dropout (in a 3-layer network)
+
+p = 0.5
+
+def tran_step(X):
+    H1 = np.maximum(0, np.dot(W1, X) + b1) # Relu Activation
+    U1 = np.random.rand(*H1.shape) < p # first dropout mask
+    H1 *= U1 # drop
+
+    H2 = np.maximum(0, np.dot(W2, H1) + b2)
+    U2 = np.random.rand(*H2.shape) < p # first dropout mask
+    H2 *= U2 # drop
+    out = np.dot(W3, H2) + b3
+
+def predict(X): # p: dropout rate at test time
+    H1 = np.maximum(0, np.dot(W1, X) + b1) * p
+    H2 = np.maximum(0, np.dot(W2, H1) + b2) * p
+    out = np.dot(W3, H2) + b3
+
+
+
+CNNs
+
+https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
+
+
+=====
+
+Killing pandas 
+ -> not used in any ML
+ -> only useful for data exploration
+
+### Pandas
+    1. Read a CSV file and display
+    2. Select
+
+    https://pandas.pydata.org/pandas-docs/stable/user_guide/cookbook.html
+    http://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+
+    https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
+
+====
+
+Deep Training workflow
+
+A) Train the Model
+    a) Prepare the data (normalize it)
+    b) Train the model
+        -> keep reducing the error loss function to determine the weights of W
+
+    c) Test the model
+        With the given determined W, make predictions on the test set
+        Compute the error we get here
+
+    d) Compare the error in the training vs the test
+        -> large gap: overfitting the data? decrease model complexity
+        -> small gap: maybe underfit? increase model complexity
+
+B) Make predictions
+    Given the weights produced during training,
+    make predictions in the real world
+
+    Use the pre-trained model (check model zoo) to make predictions
+
+A) Computationally expensive, it can take days or weeks
+B) Predictions should be relatively fast to compute from the model and weights.
+
+
+Intro to Parallel Programming
+https://classroom.udacity.com/courses/cs344/
+https://www.youtube.com/playlist?list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2
+
+
+http://ufldl.stanford.edu/
+
+----
+
+RNN
+
+-> hello ?
+---> English sonnet? Shakespeare?
+
+    * Open source math topology
+        -> Diagrams and Lemmas
+
+    * Linux source
+        -> C source code + comments (no-sense)
+
+=> Training on character sequence
 

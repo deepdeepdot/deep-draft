@@ -34,7 +34,7 @@ for label, kernel in kernels.items():
 
     for i in range(nrows):
         for j in range(ncols):
-            if (i > 1 and j > 1) and (i < nrows-1 and j < ncols-1):
+            if (i > 0 and j > 0) and (i < nrows-1 and j < ncols-1):
                 for c in range(nchannels):
                     source = img[i-1:i+2, j-1:j+2, c]
                     buffer[i][j][c] = np.sum(np.multiply(source, kernel))

@@ -541,3 +541,14 @@ RNN
 
 => Training on character sequence
 
+
+
+### Install the tensorflow library (GPU version? nvidia GPUs)
+
+    $ conda activate nanos
+    $ conda list
+    $ conda list | grep tensorflow
+    # replace tensorflow with tensorflow-gpu, IF you have a gpu
+    $ conda install tensorflow 
+    $ conda list | grep tensorflow
+

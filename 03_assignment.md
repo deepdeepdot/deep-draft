@@ -73,3 +73,7 @@ You need to implement the recursive find() and the appendChild(node) methods.
 
 And print the html recursively
 
+
+#### Tensorflow practice
+
+Compute and display the Bell Curve using tensorflow instead of the numpy library

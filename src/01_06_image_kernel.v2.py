@@ -33,14 +33,13 @@ def create_kernel_image(img, kernel):
     kernel = np.array(kernel).reshape((1, 3*3)) # so we can dot the source
     buffer = np.zeros((nrows, ncols, 3))
 
-    for i in range(nrows):
-        for j in range(ncols):
-            if (i > 1 and j > 1) and (i < nrows-2 and j < ncols-2):
-                for c in range(nchannels):
-                    source = img[i:i+3, j:j+3, c].reshape((3*3, 1))
-                    # buffer[i][j][c] = np.sum(np.multiply(source, kernel))
-                    # x10: Massive performance gains for matrix multiply with GPUs
-                    buffer[i][j][c] = np.dot(kernel, source)
+    for i in range(1, nrows-1):
+        for j in range(1, ncols-1):
+            for c in range(nchannels):
+                source = img[i:i+3, j:j+3, c].reshape((3*3, 1))
+                # buffer[i][j][c] = np.sum(np.multiply(source, kernel))
+                # x10: Massive performance gains for matrix multiply with GPUs
+                buffer[i][j][c] = np.dot(kernel, source)
 
     buffer = np.clip(buffer, 0, 255).astype(int)
     return buffer

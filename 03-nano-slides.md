@@ -185,7 +185,7 @@ https://emredjan.github.io/blog/2017/07/19/plotting-distributions/
     plt.show()
 
 
-### Kadenze class on Tensorflow
+#### Kadenze class on Tensorflow
 
 - Material verbatim from:
 https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow/info
@@ -296,7 +296,7 @@ https://hacks.mozilla.org/2017/02/a-crash-course-in-assembly/
   * Eval: tree -> number
 
 
-#### Recursive defintions: Fibonacci
+#### Recursive definitions
 
     Fibonacci
     fib(0) = 1
@@ -332,7 +332,7 @@ https://hacks.mozilla.org/2017/02/a-crash-course-in-assembly/
 * https://twobithistory.org/2018/10/14/lisp.html
 
 
-####  Print the expression
+####  Print the expression recursively
 
     def print_expression(expression):
       if (len(expression) == 1):
@@ -381,7 +381,7 @@ https://hacks.mozilla.org/2017/02/a-crash-course-in-assembly/
       return 1
 
 
-### Tree: let's plant one
+#### Tree: let's plant one
 
     def node(data=None, left=None, right=None):
       return {
@@ -451,35 +451,28 @@ Implement 'eval()'
         value_right = self.eval(node.right)
         return node.data( value_left, value_right )
 
-TODO: check      
-      def __str__(self):
-        if self is null: return ""
-        return __str__(self.left) + self.data + __str__(self.right)
-
-
-### Exercises
-1. Implement __str__ for printing the tree
-2. Implement an indented version for printing the tree
-
 
 ### Parser?
 
-  - What's wrong with our calculator?
-    - It's hardcoded for the expression: "4 / 2 + 3 * 4"
-    - No support for parenthensis, unary operators (negative)
-    - How can we make it dynamic? How do we support variables?
+* What's wrong with our calculator?
+  - It's hardcoded for the expression: "4 / 2 + 3 * 4"
+  - No support for parenthensis, unary operators (negative)
+  - How can we make it dynamic? How do we support variables?
 
-  - Yacc and Lex for Python
-    - https://www.dabeaz.com/ply/
-    - https://www.dabeaz.com/ply/ply.html
-    - https://github.com/dabeaz/ply
+* Yacc and Lex for Python
+  - https://www.dabeaz.com/ply/
+  - https://www.dabeaz.com/ply/ply.html
+  - https://github.com/dabeaz/ply
 
-  - Calculator: input = math expression
-  - Interpreter: input = computer program source code
-      - operations: for-loop, if, switch, expressions
-  - Reference
-    - http://openbookproject.net/thinkcs/python/english3e/trees.html
-    - https://pypi.org/project/binarytree/
+
+### Tree for source code?
+
+* Calculator: input = math expression
+* Interpreter: input = computer program source code
+    - operations: for-loop, if, switch, expressions
+* Reference
+  - http://openbookproject.net/thinkcs/python/english3e/trees.html
+  - https://pypi.org/project/binarytree/
 
 
 #### Tensorflow is a computational graph
@@ -507,7 +500,6 @@ TODO: check
 
 
 #### Tensorflow Variables
-TODO: Test this
     # https://www.tensorflow.org/api_docs/python/tf/Variable
 
     import tensorflow as tf
@@ -530,10 +522,5 @@ TODO: Test this
 
       w.assign(10)
       computed_z2 = sess.run(z)
-
-
-#### Tensorflow challenges
-  1. Compute the Bell Curve using tensorflow and display the image
-  2. How about using the tf.placeholder() instead of harcoding constant values?
 
 

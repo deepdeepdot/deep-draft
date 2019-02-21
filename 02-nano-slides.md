@@ -313,6 +313,7 @@ TODO: great first approach, but really want to use
 
 #### Feature detection using Matrix convolution
 
+TODO
     # Convolutions allow to detect edge patterns
     # Mouse example and looking for a curve feature
     https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/
@@ -376,17 +377,21 @@ https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
 
 ### Matplotlib Reference
 
-    - Animation with Matplotlib
-    https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
+- Examples
+    - https://matplotlib.org/examples/index.html
+    - https://github.com/matplotlib/matplotlib
 
-    - Animation Examples
-    https://matplotlib.org/examples/animation/index.html
+- Tutorial
+    - https://matplotlib.org/tutorials/introductory/pyplot.html
+    - https://matplotlib.org/tutorials/index.html
+    - https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python
 
-    - Examples
-        - https://matplotlib.org/examples/index.html
-        - https://github.com/matplotlib/matplotlib
 
-    - Tutorial
-        - https://matplotlib.org/tutorials/introductory/pyplot.html
-        - https://matplotlib.org/tutorials/index.html
-        - https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python
+### Animation with Matplotlib
+
+- Animation with Matplotlib
+https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
+
+- Animation Examples
+https://matplotlib.org/examples/animation/index.html
+

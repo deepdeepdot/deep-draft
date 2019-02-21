@@ -10,14 +10,10 @@ Paul Klee
 
 ### Topics
 
-    1. Math : Matrix Transpose and Multiplication
-    2. Python
-        * Installation (conda, ipython)
-        * Image Manipulation (read/process/write files)
-    3. ML: ml5js.org 
-        * Image classifier
-        * PoseNet
-        * Style Transfer
+* Math : Matrix Transpose and Multiplication
+* Python
+    - Installation (conda, ipython)
+    - Image Manipulation (read/process/write files)
 
 
 ### A. Intro to Python
@@ -25,13 +21,13 @@ Paul Klee
 
 ### What's Python?
 * High-level language for science and cs learning
-    * Web development.
+    - Web development.
         http://flask.pocoo.org/
-    * Game development.
+    - Game development.
         http://inventwithpython.com/pygame/
-    * Data science and machine learning!
+    - Data science and machine learning!
         https://scikit-learn.org/
-    * Music with Python! http://foxdot.org
+    - Music with Python! http://foxdot.org
 
 
 ### Setup Anaconda
@@ -138,6 +134,7 @@ Paul Klee
 
 - Python, Numpy<br/>
 http://cs231n.github.io/python-numpy-tutorial/
+https://www.udemy.com/deep-learning-prerequisites-the-numpy-stack-in-python/
 
 - List Comprehension<br/>
 https://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/
@@ -177,9 +174,7 @@ http://matrixmultiplication.xyz/
     X: m x p (m rows by p columns)
 
 
-### Python Challenge!
-
-Implement Matrix Multiplication
+### Implement Matrix Multiplication
 
     def multiply(A, B):
         None
@@ -197,16 +192,6 @@ Implement Matrix Multiplication
 
 
 ### C. Images with Python
-
-
-### Install the tensorflow library (GPU version? nvidia GPUs)
-
-    $ conda activate nanos
-    $ conda list
-    $ conda list | grep tensorflow
-    # replace tensorflow with tensorflow-gpu, IF you have a gpu
-    $ conda install tensorflow 
-    $ conda list | grep tensorflow
 
 
 ### RGB/RGBA Color Model
@@ -250,7 +235,7 @@ Implement Matrix Multiplication
 
 #### Ex: Image Compression
 
-<p align="left">Suppose you have an image of size 640x360, how can we get an image of size 320x180 (half the image!?)</p>
+<p align="left">Suppose you have an image of size 640x360, how can we get an image of size 320x180?</p>
 
     import matplotlib.pyplot as plt
 
@@ -268,9 +253,9 @@ Implement Matrix Multiplication
 ### Downsampling
 
 <!-- (https://adeshpande3.github.io/assets/MaxPool.png) -->
-![MaxPooling Image](../img/maxpool.png)
+![MaxPooling Image](img/maxpool.png)
 
-Can we code this?
+Can you code this?
 
 
 #### Ex: Downsampling
@@ -316,13 +301,12 @@ http://setosa.io/ev/image-kernels/
     ]
     buffer = np.zeros((nrows, ncols, 3))
 
-    for i in range(nrows):
-        for j in range(ncols):
-            if (i > 0 and j > 0) and (i < nrows-1 and j < ncols-1):
-                for c in range(nchannels):
-                    source = img[i-1:i+2, j-1:j+2, c]
-                    # Wait: sum of products? this looks familiar, right?
-                    buffer[i][j][c] = np.sum(np.multiply(source, blur))
+    for i in range(1, nrows-1):
+        for j in range(1, ncols-1):
+            for c in range(nchannels):
+                source = img[i-1:i+2, j-1:j+2, c]
+                # Wait: sum of products? this looks familiar, right?
+                buffer[i][j][c] = np.sum(np.multiply(source, blur))
 
     buffer = np.clip(buffer, 0, 255).astype(int)
 
@@ -338,35 +322,18 @@ http://setosa.io/ev/image-kernels/
 
     blur = np.array(blur).reshape((1, 3*3)) # so we can dot the source
 
-    for i in range(nrows):
-        for j in range(ncols):
-            if (i > 0 and j > 0) and (i < nrows-1 and j < ncols-1):
-                for c in range(nchannels):
-                    source = img[i-1:i+2, j-1:j+2, c].reshape((3*3, 1))
-                    # x10: Massive performance gains for matrix multiply if numpy supports GPU
-                    buffer[i][j][c] = np.dot(blur, source)
+    for i in range(1, nrows-1):
+        for j in range(1, ncols-1):
+            for c in range(nchannels):
+                source = img[i-1:i+2, j-1:j+2, c].reshape((3*3, 1))
+                # x10: Massive performance gains for matrix multiply if numpy supports GPU
+                buffer[i][j][c] = np.dot(blur, source)
 
     buffer = np.clip(buffer, 0, 255).astype(int)
 
 
-### D. ML Projects
-
-
-### ml5js
-https://ml5js.org/
-
-    * Image classifier
-    * PoseNet
-    * Style Transfer
-
-    Exercise
-    Extend the Image classifier to train and recognize your own images
-
-
 ### Reference
 
-* Python:
-https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb
 * Matrix:
     https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/linear_algebra.html
 
@@ -430,27 +397,27 @@ http://akaptur.com/blog/2014/09/11/rejected-pycon-proposals/
 
 ### Zen of Python
 
-  import this
+import this
 
-        Beautiful is better than ugly.
-        Explicit is better than implicit.
-        Simple is better than complex.
-        Complex is better than complicated.
-        Flat is better than nested.
-        Sparse is better than dense.
-        Readability counts.
-        Special cases aren't special enough to break the rules.
-        Although practicality beats purity.
-        Errors should never pass silently.
-        Unless explicitly silenced.
-        In the face of ambiguity, refuse the temptation to guess.
-        There should be one—and preferably only one—obvious way to do it.
-        Although that way may not be obvious at first unless you're Dutch.
-        Now is better than never.
-        Although never is often better than right now.[n 1]
-        If the implementation is hard to explain, it's a bad idea.
-        If the implementation is easy to explain, it may be a good idea.
-        Namespaces are one honking great idea—let's do more of those! 
+    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability counts.
+    Special cases aren't special enough to break the rules.
+    Although practicality beats purity.
+    Errors should never pass silently.
+    Unless explicitly silenced.
+    In the face of ambiguity, refuse the temptation to guess.
+    There should be one—and preferably only one—obvious way to do it.
+    Although that way may not be obvious at first unless you're Dutch.
+    Now is better than never.
+    Although never is often better than right now.[n 1]
+    If the implementation is hard to explain, it's a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    Namespaces are one honking great idea—let's do more of those! 
 
   - Tim Peters, 1999
 

@@ -229,7 +229,7 @@ http://web.cs.ucdavis.edu/~yjlee/teaching/ecs289g-winter2018/Pytorch_Tutorial.pd
 
 Nano sessions
 
-#1 Python (anacaonda, ipython)
+#1 Python (anaconda, ipython)
     Matrices -> Image processing (greying, compressing/downsampling)
 
 #2 Numpy

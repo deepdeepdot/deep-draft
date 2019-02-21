@@ -6,7 +6,6 @@ This course was prepared for the Nanohacker community
     $ cd deep-nano-draft
 
 
-
 If you have python 2.7
 
     $ python -m SimpleHTTPServer
@@ -21,6 +20,12 @@ If you have python 3
 
 It requires proficiency in some programming language, say Ruby or Javascript.
 We'll cover some computer science topics like binary trees, functional programming using Python, uses of classes.
+
+Prerequisites
+* Experience with programming
+* Full stack web development
+
+Math Cheatsheet https://www.flickr.com/photos/95869671@N08/40544016221
 
 * Math concepts: matrix, functions, basic stats
 * Programming with Python: images, plotting fns

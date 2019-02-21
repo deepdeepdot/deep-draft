@@ -313,10 +313,10 @@ TODO: great first approach, but really want to use
 
 #### Feature detection using Matrix convolution
 
-TODO
+TODO # Convolution feature detection (IntroToDeepLearning.com ?) 
     # Convolutions allow to detect edge patterns
-    # Mouse example and looking for a curve feature
-    https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/
+     # Mouse example and looking for a curve feature
+        https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/
 
 
 ### Jupyter Notebooks

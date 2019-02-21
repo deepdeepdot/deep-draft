@@ -524,3 +524,6 @@ Implement 'eval()'
       computed_z2 = sess.run(z)
 
 
+#### Reference
+
+* Tensorflow slides: http://web.stanford.edu/class/cs20si/syllabus.html

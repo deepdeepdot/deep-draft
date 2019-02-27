@@ -1,4 +1,4 @@
-### Nano Deep Learning
+### Nano Deep Learning in 7 Sessions
 
 This course was prepared for the Nanohacker community
 
@@ -18,8 +18,9 @@ If you have python 3
 
 ### Overview
 
-It requires proficiency in some programming language, say Ruby or Javascript.
-We'll cover some computer science topics like binary trees, functional programming using Python, uses of classes.
+It requires proficiency in a programming language, say Ruby or Javascript.
+We'll cover some computer science topics like trees, functional 
+programming using Python, uses of classes.
 
 Prerequisites
 * Experience with programming
@@ -28,13 +29,26 @@ Prerequisites
 Math Cheatsheet https://www.flickr.com/photos/95869671@N08/40544016221
 
 * Math concepts: matrix, functions, basic stats
-* Programming with Python: images, plotting fns
+* Programming with Python: images, plotting functions
 * Intro to deep learning concepts
+* Neural Networks: NN, CNN, RNN
 * Overview of popular APIs
     - tensorflow, keras, pytorch
 * Deep Learning with Javascript
     - ml5.js, magenta.js, tensorflow.js
-* NN, CNN, RNN
+
+### Sources
+
+I decided not to recreate slides that have been wonderfully created by other free online courses. And also reuse much of the available online material on the net.
+
+Sources:
+https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow/info
+http://introtodeeplearning.com
+https://matplotlib.org
+
+Slides:
+Deep Learning: http://introtodeeplearning.com
+Tensorflow: http://web.stanford.edu/class/cs20si/syllabus.html
 
 
 ### Sections
@@ -55,10 +69,30 @@ Math Cheatsheet https://www.flickr.com/photos/95869671@N08/40544016221
 
 [Session #4](04-nano-slides.md)
 * Backpropagation for gradient
-* Neural Networks
 * Perceptron and sigmoid activation
+* Neural Networks in 11 lines of code
+* Alpha learning rate
+
 * MNIST digits, image classification
 
 [Session #5](05-nano-slides.md)
-* CNN, ConvNets
+* CNN or ConvNets
 * ImageNet, AlexNet, VGG16...
+
+[Session #6](06-nano-slides.md)
+* Sequence modeling
+* RNN, GRU, LSTM
+
+Zoo: NN, CNN, RNN
+Models, Training models (takes more gpu and time: months!)
+
+
+[Session #7](07-nano-slides.md)
+* GANS
+* SRGANS, SuperResolution GANS
+    https://medium.com/@jonathan_hui/gan-super-resolution-gan-srgan-b471da7270ec
+    https://medium.com/@birla.deepak26/single-image-super-resolution-using-gans-keras-aca310f33112
+
+    https://transcranial.github.io/keras-js/#/image-super-resolution
+
+* Reinforcement Learning

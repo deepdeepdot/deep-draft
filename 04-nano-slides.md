@@ -1,6 +1,22 @@
 Deep Learning
 ----
 
+* Minimization review using gradient descent
+Algorithm
+
+Stochastic Gradient Descent
+    1. Initialize weights randomly ~N(0,sigma)
+    2. Loop until convergence:
+        3. Pick single data point i
+        4. Compute gradient
+            gradient = dJ/dW, J: loss function, using back propagation
+        5. Update weights
+            W := W - alpha * gradient
+    6. Return weights
+
+Make predictions using the weights
+
+
 ### A. Go over our gradient descent solution and error loss function
 
 General solution + concepts
@@ -285,8 +301,6 @@ Deep Learning?
 -> Neural Networks architectures
 
 http://www.asimovinstitute.org/neural-network-zoo/
-
-
 
 
 

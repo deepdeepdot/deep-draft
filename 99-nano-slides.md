@@ -292,83 +292,14 @@ https://github.com/pytorch/vision/tree/master/torchvision/models
 
 Keras slides!
 
-AI
-    * ML
-        -Linear Regression
-        -SVM
-        -Trees/Ensemble
-        -K-clustering
-
-        * DL
-            NN: perceptron
-                * Not new, but it requires:
-                    -> Massive amounts of data (Internet!)
-                    -> Massive computing power (GPUs)
-            CNN: ConvNet. Computer Vision
-                Model: VGG16, ResNet, AlexNet, LeNet, Inception, Yolo
-                - Face recognition
-                - Pose recognition
-                - Semantic Segmentation / Instance Segmentation
-                - Self-driving cards (Detection)
-                - Deep Dreams
-                - Style Transfer
-                - Colorization (old photos, line drawings)
-            RNN (sequence model, based on time)
-                RNN, GRU, LSTM, word2vec, wavenet
-                - Language
-                    - sentiment analysis
-                    - speech recognition
-                    - translation
-                    - text summarization
-                    - Chat bots
-                        Duplex restaurant reservation
-                - Music
-                    - jazz improvisation
-                    - jamming duet
-                - Image captioning
-    
-            GANS (Adversarial Networks)
-                Deep Fakes?
-
-            RL (Reinforcement Learning)
-                - AlphaGo beating top Go player
-                - Atari AI players
-                - Dota 2 AI players
-                DQN: Deep Q Networks
 
 
 In God we trust; others must provide data
 Anonymous
 
-Popular Datasets
-    MNIST
-        http://yann.lecun.com/exdb/mnist/
-        (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
-
-    CIFAR: http://www.cs.toronto.edu/~kriz/cifar.html
-            
-    Celebrity Database
-
-    Kaggle Datasets
-
-Frameworks
-    Tensorflow
-        google
-        stanford cs20
-    Keras
-    Scikit
-    PyTorch (FB)
-        udacity
-    Caffe/Caffe2
-    Theano
-    MXNET
-    AWS?
 
     Companies:
         Uber - Horovod: https://eng.uber.com/horovod/
-
-
-
 
 
 Roadmaps to learn?
@@ -552,3 +483,6 @@ RNN
     $ conda install tensorflow 
     $ conda list | grep tensorflow
 
+
+    $ conda install nb_conda
+ 

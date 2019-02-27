@@ -311,21 +311,16 @@ TODO: great first approach, but really want to use
     vals[idx]
 
 
-#### Feature detection using Matrix convolution
-
-TODO # Convolution feature detection (IntroToDeepLearning.com ?) 
-    # Convolutions allow to detect edge patterns
-     # Mouse example and looking for a curve feature
-        https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/
-
-
 ### Jupyter Notebooks
 
 - Run locally
         $ conda activate nanos
-        $ jupyter notebook .
-    
-    Shift+Return (execute the cell)
+        $ jupyter notebook . 
+- Execute: Shift+Return (execute the cell)
+
+- How to add the nano kernel to jupyter
+        $ conda install nb_conda
+        python -m ipykernel install --user --name nano --display-name "Python (nano)"
 
 - Tutorial
 https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook

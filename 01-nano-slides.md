@@ -44,6 +44,13 @@ Paul Klee
     $ conda activate nanos
     $ python --version
 
+    # Update conda
+    $ conda update conda
+    $ conda update anaconda
+
+    # Remove environment
+    $ conda env remove --name nanos
+
     # Exercise
     # Create a conda environment named 'python2.7' having python v2.7
 
@@ -84,13 +91,16 @@ Paul Klee
     [1]: numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     [2]: numbers[0]
-
     [3]: numbers[3:7]
-
     [4]: numbers[0:9:2]
     [5]: numbers[0:9:3]
 
-    [6]: multiply_of_3 = numbers[0:9:3]
+    [6]: multiplies_of_3 = numbers[0:9:3]
+
+    [7]: a = [1, 2, 3, 4]
+    [8]: b = [4, 3, 2, 1]
+    [9]: c = [*(a,b)]
+    [10]: c = [*a, *b]
 
 
 ### List Comprehension
@@ -271,9 +281,9 @@ Can you code this?
 
     for row in range(2, half_rows-2):
         for col in range(2, half_cols-2):
-            sub = img[row*2:(row+1)*2, col*s:(col+1)*2,:]
+            selection = img[row*2:(row+1)*2, col*s:(col+1)*2,:]
             for c in range(nchannels):
-                buffer[row, col, c] = np.max(sub[:,:,c])
+                buffer[row, col, c] = np.max(selection[:,:,c])
 
 
 #### Image Kernels and convolutions
@@ -330,6 +340,19 @@ http://setosa.io/ev/image-kernels/
                 buffer[i][j][c] = np.dot(blur, source)
 
     buffer = np.clip(buffer, 0, 255).astype(int)
+
+
+### 2D Matrices Transformations
+
+* https://thebookofshaders.com/08/
+  - Translation
+  - Rotation
+  - Scaling
+
+No worries. This will be covered in your algebra class!
+
+* Interactive Algebra
+http://immersivemath.com/ila/index.html
 
 
 ### Reference

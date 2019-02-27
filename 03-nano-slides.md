@@ -296,6 +296,24 @@ https://hacks.mozilla.org/2017/02/a-crash-course-in-assembly/
   * Eval: tree -> number
 
 
+#### What's recursion?
+
+Who is Remus?
+Remus is a the brother of Romulus
+
+And who is Romulus?
+Romulus is the brother of Remus
+
+StackOverflow?
+
+Conway's Game of Life
+http://xahlee.info/math/recursive_game_of_life.html
+https://nullprogram.com/blog/2014/06/10/
+
+Mandelbrots Fractals
+http://blog.recursiveprocess.com/2014/04/05/mandelbrot-fractal-v2/
+
+
 #### Recursive definitions
 
     Fibonacci
